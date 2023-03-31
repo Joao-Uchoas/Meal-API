@@ -1,6 +1,6 @@
 # Meal-API
 
-Esta API foi desenvolvida utilizando Spring Boot, Firebase e JWT para gerenciamento de refeições. A aplicação permite adicionar, listar, atualizar e deletar refeições, e usa autenticação com JWT para proteger os endpoints.
+Esta API foi desenvolvida utilizando Spring Boot, Firebase e JWT para gerenciamento de refeições do usuário. A aplicação permite adicionar, listar e deletar refeições, e usa autenticação com JWT para proteger os endpoints.
 
 ## Tecnologias utilizadas
 

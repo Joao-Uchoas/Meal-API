@@ -35,6 +35,5 @@ A aplicação segue o padrão MVC (Model-View-Controller) e está organizada da 
 
 - `GET /refeicoes`: Lista todas as refeições
 - `POST /refeicoes`: Adiciona uma nova refeição
-- `PUT /refeicoes/{id}`: Atualiza uma refeição existente pelo ID
 - `DELETE /refeicoes/{id}`: Deleta uma refeição pelo ID
 

@@ -1,1 +1,1 @@
-INSERT INTO TB_MEAL (name) VALUES ('CARNE');
+INSERT INTO TB_MEAL (name) VALUES ('carne');

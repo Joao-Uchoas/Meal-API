@@ -46,31 +46,5 @@ public class MealService {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Meal not found!");
         }
     }
-
-    /*
-     
-
-    public MealDTO createMeal(MealDTO mealDTO) {
-        Meal meal = new Meal(mealDTO.getName());
-        Meal savedMeal = mealRepository.save(meal);
-        return new MealDTO(savedMeal.getId(), savedMeal.getName());
-    }
-
-    public List<MealDTO> getAllMeals() {
-        return mealRepository.findAll().stream()
-                .map(meal -> new MealDTO(meal.getId(), meal.getName()))
-                .collect(Collectors.toList());
-    }
-
-    public MealDTO getMealById(Long id) {
-        Meal meal = mealRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Meal not found"));
-        return new MealDTO(meal.getId(), meal.getName());
-    }
-
-    public void deleteMeal(Long id) {
-        mealRepository.deleteById(id);
-    }
-     */
 }
 

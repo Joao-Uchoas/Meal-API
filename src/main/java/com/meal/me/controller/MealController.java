@@ -49,29 +49,4 @@ public class MealController {
         mealService.mealDelete(id);
         return ResponseEntity.noContent().build();
     }
-
-
-    // @PostMapping
-    // public ResponseEntity<MealDTO> createMeal(@RequestBody MealDTO mealDTO) {
-    //     MealDTO savedMealDTO = mealService.createMeal(mealDTO);
-    //     return new ResponseEntity<>(savedMealDTO, HttpStatus.CREATED);
-    // }
-
-    // @GetMapping
-    // public ResponseEntity<List<MealDTO>> getAllMeals() {
-    //     List<MealDTO> mealDTOs = mealService.getAllMeals();
-    //     return new ResponseEntity<>(mealDTOs, HttpStatus.OK);
-    // }
-
-    // @GetMapping("/{id}")
-    // public ResponseEntity<MealDTO> getMealById(@PathVariable("id") Long id) {
-    //     MealDTO mealDTO = mealService.getMealById(id);
-    //     return new ResponseEntity<>(mealDTO, HttpStatus.OK);
-    // }
-    
-    // @DeleteMapping("/{id}")
-    // public ResponseEntity<Void> deleteMeal(@PathVariable("id") Long id) {
-    //     mealService.deleteMeal(id);
-    //     return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-    // }
 }

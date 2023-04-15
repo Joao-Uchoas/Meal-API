@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Application<Meal.Me>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.meal.me.Application",
+            "projectName": "Meal.Me",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

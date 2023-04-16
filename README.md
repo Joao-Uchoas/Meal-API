@@ -1,4 +1,4 @@
-# Meal-API ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/joao-uchoas/Meal-API/maven)
+# Meal-API ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/Joao-Uchoas/Meal-API/maven-dev)
 
 Esta API foi desenvolvida utilizando Spring Boot, Firebase e JWT para gerenciamento de refeições do usuário. A aplicação permite adicionar, listar e deletar refeições, e usa autenticação com JWT para proteger os endpoints.
 

@@ -23,13 +23,13 @@ A aplicação segue o padrão MVC (Model-View-Controller) e está organizada da 
 
 ## Como executar
 
-1. Clone este repositório
-2. Navegue até o diretório do projeto
-3. Execute `mvn clean install` para baixar e instalar as dependências
-4. Importe o projeto para sua IDE de preferência
-5. Configure o Firebase com suas credenciais no arquivo `firebase.json`
-6. Execute a aplicação utilizando a classe principal `MyApiApplication`
-7. Acesse os endpoints através da URL base `http://localhost:8080`
+1. Clone este repositório.
+2. Navegue até o diretório do projeto.
+3. Execute `mvn clean install` para baixar e instalar as dependências.
+4. Importe o projeto para sua IDE de preferência.
+5. Configure o Firebase com suas credenciais no arquivo `firebase.json`.
+6. Execute a aplicação utilizando a classe principal `MyApiApplication`.
+7. Acesse os endpoints através da URL base `http://localhost:8080`.
 
 ## Endpoints disponíveis
 

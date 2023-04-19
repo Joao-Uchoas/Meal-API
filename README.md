@@ -16,7 +16,7 @@ A aplicação segue o padrão MVC (Model-View-Controller) e está organizada da 
 - `config`: Classes de configuração do Firebase e da segurança com JWT.
 - `controller`: Classe controladora responsável por lidar com as solicitações HTTP.
 - `dto`: Classe DTO (Data Transfer Object) para transferir dados entre o modelo e o cliente.
-- `model`: Classe do modelo de dados (Refeição).
+- `entity`: Classe da identidade dos dados (Refeição).
 - `repository`: Interface do repositório que estende o JpaRepository para realizar operações de banco de dados.
 - `service`: Interface do serviço e sua implementação.
 - `resources`: Arquivos de configuração, como o application.properties e o arquivo JSON do Firebase.
@@ -33,7 +33,8 @@ A aplicação segue o padrão MVC (Model-View-Controller) e está organizada da 
 
 ## Endpoints disponíveis
 
-- `GET /refeicoes`: Lista todas as refeições
-- `POST /refeicoes`: Adiciona uma nova refeição
-- `DELETE /refeicoes/{id}`: Deleta uma refeição pelo ID
+- `GET /api/meals`: Lista todas as refeições
+- `GET /api/meals/{id}`: Lista uma refeição
+- `POST /api/meals`: Adiciona uma nova refeição
+- `DELETE /api/meals/{id}`: Deleta uma refeição pelo ID
 

@@ -1,0 +1,13 @@
+com/meal/me/controller/MealController.class
+com/meal/me/service/TokenService.class
+com/meal/me/controller/AuthController.class
+com/meal/me/entity/Meal.class
+com/meal/me/service/AuthenticationService.class
+com/meal/me/FilterToken.class
+com/meal/me/service/MealService.class
+com/meal/me/repository/MealRepository.class
+com/meal/me/entity/User.class
+com/meal/me/repository/UserRepository.class
+com/meal/me/Application.class
+com/meal/me/dto/Login.class
+com/meal/me/dto/MealDTO.class

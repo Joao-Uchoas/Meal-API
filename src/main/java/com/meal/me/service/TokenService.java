@@ -13,9 +13,10 @@ import java.time.ZoneOffset;
 public class TokenService {
     public String gerarToken(User user) {
         return JWT.create()
-                .withIssuer("Produtos")
+                .withIssuer("Meal")
                 .withSubject(user.getUsername())
-                .withClaim("id", user.getId()).withExpiresAt(LocalDateTime.now()
+                .withClaim("id", user.getId())
+                .withExpiresAt(LocalDateTime.now()
                         .plusMinutes(30)
                         .toInstant(ZoneOffset.of("-03:00"))
                 ).sign(Algorithm.HMAC256("secreta"));

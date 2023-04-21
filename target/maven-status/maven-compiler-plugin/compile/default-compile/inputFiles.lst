@@ -1,0 +1,13 @@
+/Users/jrus/Documents/Meal-API/src/main/java/com/meal/me/entity/Meal.java
+/Users/jrus/Documents/Meal-API/src/main/java/com/meal/me/service/MealService.java
+/Users/jrus/Documents/Meal-API/src/main/java/com/meal/me/dto/MealDTO.java
+/Users/jrus/Documents/Meal-API/src/main/java/com/meal/me/Application.java
+/Users/jrus/Documents/Meal-API/src/main/java/com/meal/me/controller/MealController.java
+/Users/jrus/Documents/Meal-API/src/main/java/com/meal/me/repository/UserRepository.java
+/Users/jrus/Documents/Meal-API/src/main/java/com/meal/me/entity/User.java
+/Users/jrus/Documents/Meal-API/src/main/java/com/meal/me/controller/AuthController.java
+/Users/jrus/Documents/Meal-API/src/main/java/com/meal/me/service/AuthenticationService.java
+/Users/jrus/Documents/Meal-API/src/main/java/com/meal/me/repository/MealRepository.java
+/Users/jrus/Documents/Meal-API/src/main/java/com/meal/me/dto/Login.java
+/Users/jrus/Documents/Meal-API/src/main/java/com/meal/me/FilterToken.java
+/Users/jrus/Documents/Meal-API/src/main/java/com/meal/me/service/TokenService.java

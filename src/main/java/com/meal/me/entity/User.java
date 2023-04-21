@@ -4,7 +4,12 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -16,7 +21,7 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    private String login;
+    private String user;
 
     private String password;
 
@@ -41,7 +46,7 @@ public class User implements UserDetails {
 
     @Override
     public String getUsername() {
-        return login;
+        return user;
     }
 
     @Override

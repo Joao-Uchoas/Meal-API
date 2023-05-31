@@ -35,9 +35,4 @@ public class MealsController {
     public String deleteMeals(@RequestParam String documentId) throws InterruptedException, ExecutionException {
         return mealsService.deleteMeals(documentId);
     }
-
-    @GetMapping("/meals")
-    public ResponseEntity<String> testMealsGetEndpoint() {
-        return ResponseEntity.ok("Meals Endpoint Success!!");
-    }
 }

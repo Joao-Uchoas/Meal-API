@@ -3,12 +3,12 @@ package com.meal.me.entity;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.crypto.Mac;
+import java.util.Map;
 
 @Setter
 @Getter
 public class Goals {
     private Integer dailyCalories;
-    private MacroNutrients macroNutrients;
+    private Map<String, Object> macroNutrients;
     private Integer weight;
 }

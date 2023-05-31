@@ -1,14 +1,13 @@
 package com.meal.me.Service;
 
 import com.google.api.core.ApiFuture;
-import com.google.cloud.firestore.DocumentReference;
-import com.google.cloud.firestore.DocumentSnapshot;
-import com.google.cloud.firestore.Firestore;
-import com.google.cloud.firestore.WriteResult;
+import com.google.cloud.firestore.*;
 import com.google.firebase.cloud.FirestoreClient;
 import com.meal.me.entity.User;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
 @Service
@@ -25,16 +24,47 @@ public class UserService {
             user = document.toObject(User.class);
             return user;
         }
+        System.out.println("No such document with ID: " + documentId);
         return null;
     }
-
-    // Create User Service
     public String createUser(User user) throws ExecutionException, InterruptedException {
         Firestore dbFirestore = FirestoreClient.getFirestore();
-        ApiFuture<WriteResult> collectionApiFuture = dbFirestore.collection("users").document(user.getName()).set(user);
+
+        CollectionReference mealsRef = dbFirestore.collection("meals");
+        Map<String, Object> meals = new HashMap<>();
+        for (String mealId : user.getMeals().keySet()) {
+            DocumentReference mealDocRef = mealsRef.document(mealId);
+            ApiFuture<DocumentSnapshot> future = mealDocRef.get();
+            DocumentSnapshot document = future.get();
+            if (document.exists()) {
+                meals.put(mealId, document.getData());
+            } else {
+                System.out.println("No such document with ID: " + mealId);
+            }
+        }
+        user.setMeals(meals);
+
+        CollectionReference goalsRef = dbFirestore.collection("goals");
+        Map<String, Object> goals = new HashMap<>();
+
+        for (String goalsId : user.getGoals().keySet()) {
+            DocumentReference mealDocRef = goalsRef.document(goalsId);
+            ApiFuture<DocumentSnapshot> future = mealDocRef.get();
+            DocumentSnapshot document = future.get();
+            if (document.exists()) {
+                goals.put(goalsId, document.getData());
+            } else {
+                System.out.println("No such document with ID: " + goalsId);
+            }
+        }
+        user.setGoals(goals);
+
+        ApiFuture<WriteResult> collectionApiFuture = dbFirestore.collection("users").document().set(user);
 
         return collectionApiFuture.get().getUpdateTime().toString();
     }
+
+
 
     // Update User Service
     public String updateUser(User user) throws ExecutionException, InterruptedException {

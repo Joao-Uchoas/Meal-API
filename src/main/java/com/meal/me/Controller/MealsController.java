@@ -2,7 +2,6 @@ package com.meal.me.Controller;
 
 import com.meal.me.Service.MealsService;
 import com.meal.me.entity.Meals;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.concurrent.ExecutionException;

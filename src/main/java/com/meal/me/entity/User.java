@@ -8,6 +8,7 @@ import java.util.Map;
 @Setter
 @Getter
 public class User  {
+    private String documentId;
     private String activityLevel;
     private String basalMetabolicRate;
     private String birthDate;

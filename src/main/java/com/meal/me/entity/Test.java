@@ -18,6 +18,4 @@ public class Test {
     @JsonSerialize(using = TimestampSerializer.class)
     @JsonDeserialize(using = TimestampDeserializer.class)
     private Timestamp localDate;
-
-
 }

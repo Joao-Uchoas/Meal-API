@@ -1,3 +1,5 @@
-com\meal\me\Controller\MealsControllerTest.class
-com\meal\me\Controller\GoalsControllerTest.class
-com\meal\me\Controller\UserControllerTest.class
+com/meal/me/MockDocumentReference.class
+com/meal/me/Controller/UserControllerTest.class
+com/meal/me/AutomatisationTest.class
+com/meal/me/Controller/GoalsControllerTest.class
+com/meal/me/Controller/MealsControllerTest.class

@@ -35,9 +35,9 @@ public class MealsService {
 
 
 
-    public String updateMeals(Meals meals) throws ExecutionException, InterruptedException {
+    public String updateMeals(Meals meals, String documentId) throws ExecutionException, InterruptedException {
         Firestore dbFirestore = FirestoreClient.getFirestore();
-        ApiFuture<WriteResult> collectionApiFuture = dbFirestore.collection("meals").document().set(meals);
+        ApiFuture<WriteResult> collectionApiFuture = dbFirestore.collection("meals").document(documentId).set(meals);
 
         return collectionApiFuture.get().getUpdateTime().toString();
     }

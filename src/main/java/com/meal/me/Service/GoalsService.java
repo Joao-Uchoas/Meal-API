@@ -36,9 +36,9 @@ public class GoalsService {
     }
 
 
-    public String updateGoals(Goals goals) throws ExecutionException, InterruptedException {
+    public String updateGoals(Goals goals, String documentId) throws ExecutionException, InterruptedException {
         Firestore dbFirestore = FirestoreClient.getFirestore();
-        ApiFuture<WriteResult> collectionApiFuture = dbFirestore.collection("goals").document().set(goals);
+        ApiFuture<WriteResult> collectionApiFuture = dbFirestore.collection("goals").document(documentId).set(goals);
 
         return collectionApiFuture.get().getUpdateTime().toString();
     }

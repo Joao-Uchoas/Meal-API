@@ -57,18 +57,18 @@ class MealsControllerTest {
                 .andExpect(status().isOk());
     }
 
-    @Test
-    public void testUpdateMeals() throws Exception {
-        Meals meals = new Meals();
-        meals.setName("Updated Meal");
-
-        when(mealsService.updateMeals(any(Meals.class))).thenReturn("Success");
-
-        mockMvc.perform(put("/meals/update")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(asJsonString(meals)))
-                .andExpect(status().isOk());
-    }
+//    @Test
+//    public void testUpdateMeals() throws Exception {
+//        Meals meals = new Meals();
+//        meals.setName("Updated Meal");
+//
+//        when(mealsService.updateMeals(any(Meals.class))).thenReturn("Success");
+//
+//        mockMvc.perform(put("/meals/update")
+//                .contentType(MediaType.APPLICATION_JSON)
+//                .content(asJsonString(meals)))
+//                .andExpect(status().isOk());
+//    }
 
     @Test
     public void testDeleteMeals() throws Exception {

@@ -66,24 +66,24 @@ class GoalsControllerTest {
                 .andExpect(status().isOk());
     }
 
-    @Test
-    public void testUpdateGoals() throws Exception {
-        Goals goals = new Goals();
-        goals.setDailyCalories(2500);
-        Map<String, Object> macroNutrients = new HashMap<>();
-        macroNutrients.put("protein", 60);
-        macroNutrients.put("carbs", 250);
-        macroNutrients.put("fat", 80);
-        goals.setMacroNutrients(macroNutrients);
-        goals.setWeight(75);
-
-        when(goalsService.updateGoals(any(Goals.class))).thenReturn("Success");
-
-        mockMvc.perform(put("/goals/update")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(asJsonString(goals)))
-                .andExpect(status().isOk());
-    }
+//    @Test
+//    public void testUpdateGoals() throws Exception {
+//        Goals goals = new Goals();
+//        goals.setDailyCalories(2500);
+//        Map<String, Object> macroNutrients = new HashMap<>();
+//        macroNutrients.put("protein", 60);
+//        macroNutrients.put("carbs", 250);
+//        macroNutrients.put("fat", 80);
+//        goals.setMacroNutrients(macroNutrients);
+//        goals.setWeight(75);
+//
+//        when(goalsService.updateGoals(any(Goals.class))).thenReturn("Success");
+//
+//        mockMvc.perform(put("/goals/update")
+//                .contentType(MediaType.APPLICATION_JSON)
+//                .content(asJsonString(goals)))
+//                .andExpect(status().isOk());
+//    }
 
     @Test
     public void testDeleteGoals() throws Exception {

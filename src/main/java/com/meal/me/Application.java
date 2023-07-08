@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Objects;
 
 @SpringBootApplication
@@ -17,11 +18,9 @@ public class Application {
 	public static void main(String []args) throws IOException {
 
 		// Load the Firebase Connection SDK
-		ClassLoader classLoader = Application.class.getClassLoader();
 
 		// get the connection file
-		File file = new File(Objects.requireNonNull(classLoader.getResource("serviceAccountKey.json")).getFile());
-		FileInputStream serviceAccount = new FileInputStream(file.getAbsolutePath());
+		InputStream serviceAccount = Application.class.getResourceAsStream("/serviceAccountKey.json");
 
 		// paste the firebase config here
 		FirebaseOptions options = new FirebaseOptions.Builder()

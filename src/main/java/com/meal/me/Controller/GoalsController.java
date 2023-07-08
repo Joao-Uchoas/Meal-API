@@ -25,8 +25,8 @@ public class GoalsController {
     }
 
     @PutMapping("/goals/update")
-    public String updateMeals(@RequestBody Goals goals) throws InterruptedException, ExecutionException {
-        return goalsService.updateGoals(goals);
+    public String updateMeals(@RequestBody Goals goals, @RequestParam String documentId) throws InterruptedException, ExecutionException {
+        return goalsService.updateGoals(goals, documentId);
     }
 
     @DeleteMapping("/goals/delete")

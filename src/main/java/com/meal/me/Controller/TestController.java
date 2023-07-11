@@ -43,7 +43,7 @@ public class TestController {
     // Create Test Endpoint
     @GetMapping("/passei")
     public ResponseEntity<String> testGetEndpoint() {
-        return ResponseEntity.ok("Test Endpoint!!");
+        return ResponseEntity.ok("Test Endpoint Success!!");
     }
 
 }
